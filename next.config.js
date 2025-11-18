@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export for file manager upload
-  output: 'export',
-  
   // Production optimizations
   reactStrictMode: true,
   swcMinify: true,
