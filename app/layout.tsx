@@ -31,6 +31,39 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                // Remove Vercel toolbar
+                const removeVercelToolbar = () => {
+                  const toolbar = document.querySelector('[data-vercel-toolbar]') || 
+                                 document.querySelector('#__vercel-toolbar') ||
+                                 document.querySelector('iframe[src*="vercel"]');
+                  if (toolbar) {
+                    toolbar.remove();
+                  }
+                  // Also remove any Vercel toolbar styles
+                  const style = document.querySelector('style[data-vercel-toolbar]');
+                  if (style) {
+                    style.remove();
+                  }
+                };
+                // Run immediately
+                removeVercelToolbar();
+                // Run after DOM is loaded
+                if (document.readyState === 'loading') {
+                  document.addEventListener('DOMContentLoaded', removeVercelToolbar);
+                }
+                // Run after page is fully loaded
+                window.addEventListener('load', removeVercelToolbar);
+                // Use MutationObserver to catch dynamically added toolbars
+                const observer = new MutationObserver(removeVercelToolbar);
+                observer.observe(document.body, { childList: true, subtree: true });
+              })();
+            `,
+          }}
+        />
       </head>
       <body 
         className={`${inter.className} bg-[#1a0a2e]`} 
