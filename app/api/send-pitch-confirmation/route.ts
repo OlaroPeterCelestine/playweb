@@ -93,7 +93,7 @@ const createTransporter = () => {
       port: parseInt(process.env.SMTP_PORT || '587'),
       secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
       auth: {
-        user: process.env.SMTP_USER,
+        user: process.env.SMTP_USERNAME || process.env.SMTP_USER,
         pass: process.env.SMTP_PASSWORD,
       },
     })
@@ -150,8 +150,8 @@ export async function POST(request: Request) {
       })
     }
 
-    const fromEmail = process.env.EMAIL_FROM || process.env.GMAIL_USER || 'noreply@playitloud.com'
-    const fromName = process.env.EMAIL_FROM_NAME || 'Play It Loud'
+    const fromEmail = process.env.FROM_EMAIL || process.env.EMAIL_FROM || process.env.SMTP_USERNAME || process.env.SMTP_USER || process.env.GMAIL_USER || 'noreply@playitloud.com'
+    const fromName = process.env.FROM_NAME || process.env.EMAIL_FROM_NAME || 'NRG Radio Uganda'
 
     const info = await transporter.sendMail({
       from: `"${fromName}" <${fromEmail}>`,
