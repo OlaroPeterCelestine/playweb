@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import { useState, FormEvent, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
 import { Footer } from '@/components/Footer'
@@ -240,6 +241,20 @@ export default function Home() {
   }
   return (
     <div className="relative min-h-screen text-white">
+      {/* Google tag (gtag.js) */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17762940050"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17762940050');
+        `}
+      </Script>
+      
       {/* Scrolling Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div 
