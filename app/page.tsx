@@ -255,6 +255,72 @@ export default function Home() {
         `}
       </Script>
       
+      {/* Structured Data for SEO */}
+      <Script
+        id="structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Play It Loud",
+            "alternateName": "playitloud",
+            "url": "https://www.playitloud.com",
+            "logo": "https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png",
+            "description": "Play It Loud (playitloud.com) - Your ultimate streaming destination. Binge like a boss with endless movies, TV shows, and fire content.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://www.playitloud.com/search?q={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            },
+            "sameAs": [
+              "https://www.playitloud.com"
+            ]
+          })
+        }}
+      />
+      <Script
+        id="organization-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Play It Loud",
+            "alternateName": ["playitloud", "playitloud.com", "www.playitloud.com"],
+            "url": "https://www.playitloud.com",
+            "logo": "https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png",
+            "description": "Play It Loud is a streaming platform offering endless movies, TV shows, and premium content. Binge like a boss with the best entertainment experience.",
+            "foundingDate": "2025",
+            "sameAs": [
+              "https://www.playitloud.com"
+            ]
+          })
+        }}
+      />
+      <Script
+        id="service-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Streaming Service",
+            "provider": {
+              "@type": "Organization",
+              "name": "Play It Loud",
+              "alternateName": "playitloud"
+            },
+            "areaServed": "Worldwide",
+            "description": "Streaming service for movies, TV shows, and premium entertainment content",
+            "name": "Play It Loud Streaming Service"
+          })
+        }}
+      />
+      
       {/* Scrolling Background */}
       <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
         <div 
@@ -272,7 +338,7 @@ export default function Home() {
           <div className="w-24 sm:w-28 md:w-48 h-auto">
             <Image
               src="https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png"
-              alt="Play It Loud"
+              alt="Play It Loud - playitloud.com - Streaming Platform Logo"
               width={192}
               height={192}
               className="w-full h-auto object-contain"
@@ -287,15 +353,15 @@ export default function Home() {
 
         {/* Main Content */}
         <main className="text-center z-10 flex flex-col items-center w-full max-w-4xl pt-16 sm:pt-20 md:pt-5">
-          <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 px-2">
-            Binge Like a boss.
-          </p>
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight px-2">
-            Movies. shows. content that slaps.
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight px-2 mb-2">
+            Play It Loud - Binge Like a Boss
           </h1>
-          <p className="mt-4 sm:mt-6 text-xl sm:text-2xl md:text-3xl font-bold text-white px-2">
-            You Ready to Play it Loud?
+          <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 px-2">
+            Movies. Shows. Content that slaps.
           </p>
+          <h2 className="mt-4 sm:mt-6 text-xl sm:text-2xl md:text-3xl font-bold text-white px-2">
+            You Ready to Play it Loud?
+          </h2>
           <p className="mt-3 sm:mt-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white px-2">
             Drop your details - we're saving your spot on the inside.
           </p>
