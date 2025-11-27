@@ -13,15 +13,20 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.playitloud.com'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Play It Loud | Playitloud - Movies, Shows & Content That Slaps',
-    template: '%s | Play It Loud',
+    default: 'Play it loud | Play It Loud - Streaming Movies & Shows | playitloud.com',
+    template: '%s | Play it loud',
   },
-  description: 'Play It Loud (playitloud.com) - Your ultimate streaming destination. Binge like a boss with endless movies, TV shows, and fire content. Join the waitlist and experience the future of entertainment.',
+  description: 'Play it loud - Your ultimate streaming destination at playitloud.com. Binge like a boss with endless movies, TV shows, and fire content. Join Play it loud and experience premium entertainment.',
   keywords: [
+    'Play it loud',
+    'play it loud',
     'Play It Loud',
     'playitloud',
     'playitloud.com',
     'www.playitloud.com',
+    'play it loud streaming',
+    'play it loud movies',
+    'play it loud shows',
     'streaming',
     'movies',
     'TV shows',
@@ -51,8 +56,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: baseUrl,
     siteName: 'Play It Loud',
-    title: 'Play It Loud | Playitloud - Movies, Shows & Content That Slaps',
-    description: 'Binge like a boss with endless movies, TV shows, and fire content. Join Play It Loud and experience the future of streaming.',
+    title: 'Play it loud | Play It Loud - Streaming Movies & Shows | playitloud.com',
+    description: 'Play it loud - Your ultimate streaming destination. Binge like a boss with endless movies, TV shows, and fire content. Join Play it loud at playitloud.com.',
     images: [
       {
         url: 'https://res.cloudinary.com/dodl9nols/image/upload/v1757338623/PLAY_YOUTUBE_BANNER_Kansiime_fr3yop.jpg',
@@ -64,8 +69,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Play It Loud | Playitloud - Movies, Shows & Content That Slaps',
-    description: 'Binge like a boss with endless movies, TV shows, and fire content. Join Play It Loud!',
+    title: 'Play it loud | Play It Loud - Streaming Movies & Shows | playitloud.com',
+    description: 'Play it loud - Your ultimate streaming destination. Binge like a boss with endless movies, TV shows, and fire content. Join Play it loud!',
     images: ['https://res.cloudinary.com/dodl9nols/image/upload/v1757338623/PLAY_YOUTUBE_BANNER_Kansiime_fr3yop.jpg'],
     creator: '@playitloud',
   },
@@ -97,7 +102,16 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        {/* Favicon Links */}
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/dodl9nols/image/upload/v1756723101/3_glpybd.png" />
+        <link rel="shortcut icon" type="image/png" href="https://res.cloudinary.com/dodl9nols/image/upload/v1756723101/3_glpybd.png" />
+        <link rel="apple-touch-icon" href="https://res.cloudinary.com/dodl9nols/image/upload/v1756723101/3_glpybd.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/dodl9nols/image/upload/v1756723101/3_glpybd.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/dodl9nols/image/upload/v1756723101/3_glpybd.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#1a0a2e" />
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
         <script
           dangerouslySetInnerHTML={{
             __html: `

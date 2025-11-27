@@ -1,47 +1,46 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 export function Footer() {
   return (
-    <footer className="w-full p-4 sm:p-6 md:p-8 bg-black">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-6 sm:mb-8">Connect With Us</h2>
-        
-        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8">
-          {/* Play Store Card */}
-          <a href="#" className="bg-gray-800/90 hover:bg-gray-700 rounded-lg p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center min-w-[120px] sm:min-w-[140px] transition-colors">
-            <i className="fab fa-google-play text-2xl sm:text-3xl md:text-4xl mb-2 text-white"></i>
-            <h3 className="font-bold text-white text-xs sm:text-sm md:text-base">Play Store</h3>
-            <p className="text-xs md:text-sm text-gray-300 text-center">Get our app on Google Play</p>
-          </a>
+    <footer className="w-full bg-black text-white border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-16">
+        {/* Top Section - Title/Description and Social Icons */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          {/* Left - Title and Description */}
+          <div>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">
+              Play It Loud © 2025
+            </h2>
+            <p className="text-sm sm:text-base text-gray-400 leading-relaxed max-w-md">
+              Working with brands ready to break the mould. If you're bored of blending in drop us a line and let's bring your brand to life.
+            </p>
+          </div>
 
-          {/* App Store Card */}
-          <a href="#" className="bg-gray-800/90 hover:bg-gray-700 rounded-lg p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center min-w-[120px] sm:min-w-[140px] transition-colors">
-            <i className="fab fa-apple text-2xl sm:text-3xl md:text-4xl mb-2 text-white"></i>
-            <h3 className="font-bold text-white text-xs sm:text-sm md:text-base">App Store</h3>
-            <p className="text-xs md:text-sm text-gray-300 text-center">Download on the App Store</p>
-          </a>
-
-          {/* Instagram Card */}
-          <a href="#" className="bg-gray-800/90 hover:bg-gray-700 rounded-lg p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center min-w-[120px] sm:min-w-[140px] transition-colors">
-            <i className="fab fa-instagram text-2xl sm:text-3xl md:text-4xl mb-2 text-white"></i>
-            <h3 className="font-bold text-white text-xs sm:text-sm md:text-base">Instagram</h3>
-            <p className="text-xs md:text-sm text-gray-300 text-center">Follow us on Instagram</p>
-          </a>
-
-          {/* Twitter Card */}
-          <a href="#" className="bg-gray-800/90 hover:bg-gray-700 rounded-lg p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center min-w-[120px] sm:min-w-[140px] transition-colors">
-            <i className="fab fa-twitter text-2xl sm:text-3xl md:text-4xl mb-2 text-white"></i>
-            <h3 className="font-bold text-white text-xs sm:text-sm md:text-base">Twitter</h3>
-            <p className="text-xs md:text-sm text-gray-300 text-center">Follow us on Twitter</p>
-          </a>
-
-          {/* TikTok Card */}
-          <a href="#" className="bg-gray-800/90 hover:bg-gray-700 rounded-lg p-3 sm:p-4 md:p-6 flex flex-col items-center justify-center min-w-[120px] sm:min-w-[140px] transition-colors">
-            <i className="fab fa-tiktok text-2xl sm:text-3xl md:text-4xl mb-2 text-white"></i>
-            <h3 className="font-bold text-white text-xs sm:text-sm md:text-base">TikTok</h3>
-            <p className="text-xs md:text-sm text-gray-300 text-center">Follow us on TikTok</p>
-          </a>
+          {/* Right - Social Media Icons */}
+          <div className="flex items-center justify-center md:justify-end gap-4 sm:gap-6">
+            {/* Twitter/X */}
+            <a href="#" className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-colors group border border-gray-700">
+              <i className="fa-brands fa-x-twitter text-xl sm:text-2xl md:text-3xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            {/* Instagram */}
+            <a href="#" className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-colors group border border-gray-700">
+              <i className="fa-brands fa-instagram text-xl sm:text-2xl md:text-3xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            {/* TikTok */}
+            <a href="#" className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-colors group border border-gray-700">
+              <i className="fa-brands fa-tiktok text-xl sm:text-2xl md:text-3xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            {/* App Store */}
+            <a href="#" className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-colors group border border-gray-700">
+              <i className="fa-brands fa-apple text-xl sm:text-2xl md:text-3xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+            {/* Play Store */}
+            <a href="#" className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-800 hover:bg-red-600 flex items-center justify-center transition-colors group border border-gray-700">
+              <i className="fa-brands fa-google-play text-xl sm:text-2xl md:text-3xl text-gray-400 group-hover:text-white transition-colors"></i>
+            </a>
+          </div>
         </div>
-
-        <p className="text-sm md:text-base text-white text-center">© 2025 Play It Loud. All rights reserved.</p>
       </div>
     </footer>
   )

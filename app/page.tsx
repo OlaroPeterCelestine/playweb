@@ -264,7 +264,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             "name": "Play It Loud",
-            "alternateName": "playitloud",
+            "alternateName": ["Play it loud", "play it loud", "playitloud"],
             "url": "https://www.playitloud.com",
             "logo": "https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png",
             "description": "Play It Loud (playitloud.com) - Your ultimate streaming destination. Binge like a boss with endless movies, TV shows, and fire content.",
@@ -290,7 +290,7 @@ export default function Home() {
             "@context": "https://schema.org",
             "@type": "Organization",
             "name": "Play It Loud",
-            "alternateName": ["playitloud", "playitloud.com", "www.playitloud.com"],
+            "alternateName": ["Play it loud", "play it loud", "playitloud", "playitloud.com", "www.playitloud.com"],
             "url": "https://www.playitloud.com",
             "logo": "https://res.cloudinary.com/dodl9nols/image/upload/v1756723100/6_s5lwom.png",
             "description": "Play It Loud is a streaming platform offering endless movies, TV shows, and premium content. Binge like a boss with the best entertainment experience.",
@@ -312,7 +312,7 @@ export default function Home() {
             "provider": {
               "@type": "Organization",
               "name": "Play It Loud",
-              "alternateName": "playitloud"
+              "alternateName": ["Play it loud", "play it loud", "playitloud"]
             },
             "areaServed": "Worldwide",
             "description": "Streaming service for movies, TV shows, and premium entertainment content",
@@ -354,7 +354,7 @@ export default function Home() {
         {/* Main Content */}
         <main className="text-center z-10 flex flex-col items-center w-full max-w-4xl pt-16 sm:pt-20 md:pt-5">
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight px-2 mb-2">
-            Play It Loud - Binge Like a Boss
+            Play it loud - Binge Like a Boss
           </h1>
           <p className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 px-2">
             Movies. Shows. Content that slaps.
